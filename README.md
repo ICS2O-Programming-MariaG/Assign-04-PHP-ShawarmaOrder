@@ -1,1 +1,2 @@
 # Assign-04-PHP-ShawarmaOrder
+[![GitHub's Super Linter](https://github.com/ICS2O-Programming-MariaG/Assign-04-PHP-ShawarmaOrder/workflows/GitHub's%20Super%20Linter/badge.svg)](https://github.com/ICS2O-Programming-MariaG/Assign-04-PHP-ShawarmaOrder/actions)
