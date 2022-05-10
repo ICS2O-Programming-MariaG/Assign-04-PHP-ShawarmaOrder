@@ -25,10 +25,12 @@ th {
 
 iframe {
   border: none;
-  width: 90%;
+  width: 85%;
   background-color: #fdf9bc;
   padding: 25px;
   height: 90px;
+  margin-left: 20px;
+  margin-bottom: 30px;
 }
 
 h4 {
@@ -62,6 +64,7 @@ img {
 #grey {
   background-color: #dedede;
   padding: 30px 40px;
+  margin-bottom: 30px;
 }
 
 #td-left {
@@ -83,4 +86,13 @@ img {
   color: white;
   background-color: #fe6f59;
   border: none;
+}
+
+#shawarma-image {
+  width: 96%;
+  margin-left: 20px;
+}
+
+#left-margin {
+  margin-left: 20px;
 }

@@ -137,8 +137,8 @@
         </td>
         <!-- Second cell for image and results div on right side of screen -->
         <td id="td-right">
-          <img src="./images/chicken.webp">
-          <?php echo "<h4>Your Total:</h4>"; ?>
+          <img src="./images/chicken.webp" alt="shawarma image" id="shawarma-image">
+          <?php echo "<h4 id='left-margin'>Your Total:</h4>"; ?>
           <iframe id="results" name="results"></iframe>
         </td>
       </tr>
