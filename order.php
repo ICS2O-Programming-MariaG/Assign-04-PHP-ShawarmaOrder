@@ -46,23 +46,23 @@
 
   //determining the cost of the base sandwich using compound if/then statements
   //if the meat type is chicken and the size is small
-  if ((meatType == "chicken") && (sandSize == "small")) {
+  if (($meatType == "chicken") && ($sandSize == "small")) {
     $baseSandCost = 6.00;
   }
   //if the meat type is beef and the size is small
-  else if ((meatType == "beef") && (sandSize == "small")) {
+  else if (($meatType == "beef") && ($sandSize == "small")) {
     $baseSandCost = 6.50;
   }
   //if the meat type is chicken and the size is medium
-  else if ((meatType == "chicken") && (sandSize == "medium")) {
+  else if (($meatType == "chicken") && ($sandSize == "medium")) {
     $baseSandCost = 7.00;
   }
   //if the meat type is beef and the size is medium
-  else if ((meatType == "beef") && (sandSize == "medium")) {
+  else if (($meatType == "beef") && ($sandSize == "medium")) {
     $baseSandCost = 7.50;
   }
   //if the meat type is chicken and the size is large
-  else if ((meatType == "chicken") && (sandSize == "large")) {
+  else if (($meatType == "chicken") && ($sandSize == "large")) {
     $baseSandCost = 8.00;
   }
   //else indicates that the meat type is beef and the size is large
