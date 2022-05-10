@@ -24,7 +24,7 @@
     <!-- More MDL code -->
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <!-- Adding an image as a background for the text -->
-    <img src="./images/shawarma-rack.jpg" alt="shawarma">
+    <img src="./images/chicken-shawarma.jpg" alt="shawarma">
     <!-- Div to style text to be placed over image -->
     <div id="text-in-front">
       <h2>Shawarma Haven - PHP Menu</h2>
