@@ -1,6 +1,7 @@
 <?php
-  //setting a constant for tax
+  //setting constants for tax and topping cost
   define("HST", 0.13);
+  define("TOPPING_UNIT_PRICE", 0.25);
 
   //initializing variable for the base sandwich cost
   $baseSandCost = 0;
@@ -42,7 +43,7 @@
   }
 
   //calculating the total cost of toppings
-  $costToppings = $numToppings * 0.25;
+  $costToppings = $numToppings * TOPPING_UNIT_PRICE;
 
   //determining the cost of the base sandwich using compound if/then statements
   //if the meat type is chicken and the size is small
@@ -65,8 +66,8 @@
   else if (($meatType == "chicken") && ($sandSize == "large")) {
     $baseSandCost = 8.00;
   }
-  //else indicates that the meat type is beef and the size is large
-  else {
+  //if the meat type is beef and the size is large
+  else if (($meatType == "beef") && ($sandSize == "large")) {
     $baseSandCost = 8.50;
   }
 

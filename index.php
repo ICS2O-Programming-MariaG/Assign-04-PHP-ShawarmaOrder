@@ -32,7 +32,7 @@
     </div>
     <!-- Div for style -- background colour -->
     <div id="first-coloured-div">
-      <?php echo "<h4>Our Menu and Prices:</h4>"; ?>
+      <h4>Our Menu and Prices:</h4>
       <center>
         <!-- Table listing options and prices -->
         <table>
@@ -78,12 +78,14 @@
               <!-- Multiple choice - picking a meat type -->
               <label for="meat-type">Choose a type of meat for your sandwich:</label>
               <select id="meat-type" name="meat-type">
+                <option value="0">-- Meat Type --</option>
                 <option value="chicken">Chicken</option>
                 <option value="beef">Beef</option>
               </select><br><br>
               <!-- Multiple choice - picking a sandwich size -->
               <label for="sandwich-size">Choose a sandwich size</label>
               <select id="sand-size" name="sand-size">
+                <option value="0">-- Size --</option>
                 <option value="small">Small</option>
                 <option value="medium">Medium</option>
                 <option value="large">Large</option>
@@ -142,5 +144,6 @@
           <iframe id="results" name="results"></iframe>
         </td>
       </tr>
+    </table>
   </body>
 </html>
