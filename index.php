@@ -63,46 +63,84 @@
         </table>
       </center>
     </div>
-    <h4>Your Order:</h4>
-    <h5>Choose Your Base Shawarma Sandwich:</h5>
-    <!-- Form for user input -->
-    <form action="./order.php" method="post" target="results">
-      <!-- Multiple choice - picking a meat type -->
-      <label for="meat-type">Choose a type of meat for your sandwich:</label>
-      <select id="meat-type" name="meat-type">
-        <option value="chicken">Chicken</option>
-        <option value="beef">Beef</option>
-      </select><br><br>
-      <!-- Multiple choice - picking a sandwich size -->
-      <label for="sandwich-size">Choose a sandwich size</label>
-      <select id="sand-size" name="sand-size">
-        <option value="small">Small</option>
-        <option value="medium">Medium</option>
-        <option value="large">Large</option>
-      </select>
-      <h5>Choose Your Toppings:</h5>
-      <!-- Checkboxes for toppings -->
-      <label for="tabbouleh">Tabbouleh</label>
-      <input type="checkbox" id="tabbouleh" name="tabbouleh"><br><br>
-      <label for="hummus">Hummus</label>
-      <input type="checkbox" id="hummus" name="hummus"><br><br>
-      <label for="garlic">Garlic sauce</label>
-      <input type="checkbox" id="garlic" name="garlic"><br><br>
-      <label for="turnips">Pickled turnips</label>
-      <input type="checkbox" id="turnips" name="turnips"><br><br>
-      <label for="pickles">Pickles</label>
-      <input type="checkbox" id="pickles" name="pickles"><br><br>
-      <label for="onions">Onions</label>
-      <input type="checkbox" id="onions" name="onions"><br><br>
-      <h5>Choose Your Sides</h5>
-      <!-- Number input for garlic potato side -->
-      <label for="potatoes">Garlic potatoes</label>
-      <input type="number" id="potatoes" value="0" step="1" min="0" max="4" name="potatoes"><br><br>
-      <!-- Number input for drinks -->
-      <label for="drinks">Pick a number of drinks:</label>
-      <input type="number" step="1" min="0" value="0" max="6" id="drinks" name="drinks"><br><br>
-      <input type="submit" value="Submit Your Order">
-    </form>
-    <iframe id="results" name="results"></iframe>
+    <!-- Table to place image and form side-by-side -->
+    <table id="increased-table-margin">
+      <tr>
+        <td id="td-left">
+          <!-- Div for style -->
+          <div id="grey">
+            <?php
+              echo "<h4>Your Order:</h4>";
+              echo "<h5>Choose Your Base Shawarma Sandwich:</h5>";
+            ?>
+            <!-- Form for user input -->
+            <form action="./order.php" method="post" target="results">
+              <!-- Multiple choice - picking a meat type -->
+              <label for="meat-type">Choose a type of meat for your sandwich:</label>
+              <select id="meat-type" name="meat-type">
+                <option value="chicken">Chicken</option>
+                <option value="beef">Beef</option>
+              </select><br><br>
+              <!-- Multiple choice - picking a sandwich size -->
+              <label for="sandwich-size">Choose a sandwich size</label>
+              <select id="sand-size" name="sand-size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+              <h5>Choose Your Toppings:</h5>
+              <!-- MDL checkboxes for toppings -->
+              <!-- First checkbox - for tabbouleh -->
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                <span class="mdl-checkbox__label">Tabbouleh</span>
+                <input type="checkbox" id="tabbouleh" name="tabbouleh" class="mdl-checkbox__input"><br><br>
+              </label>
+              <!--Second checkbox - for hummus -->
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                <span class="mdl-checkbox__label">Hummus</span>
+                <input type="checkbox" id="hummus" name="hummus" class="mdl-checkbox__input"><br><br>
+              </label>
+              <!-- Third checkbox - for garlic sauce -->
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                <span class="mdl-checkbox__label">Garlic sauce</span>
+                <input type="checkbox" id="garlic" name="garlic" class="mdl-checkbox__input"><br><br>
+              </label>
+              <!-- Fourth checkbox - for pickled turnips -->
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                <span class="mdl-checkbox__label">Pickled turnips</span>
+                <input type="checkbox" id="turnips" name="turnips" class="mdl-checkbox__input"><br><br>
+              </label>
+              <!-- Fifth checkbox - for pickles -->
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                <span class="mdl-checkbox__label">Pickles</span>
+                <input type="checkbox" id="pickles" name="pickles" class="mdl-checkbox__input"><br><br>
+              </label>
+              <!-- Sixth checkbox - for onions -->
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                <span class="mdl-checkbox__label">Onions</span>
+                <input type="checkbox" id="onions" name="onions" class="mdl-checkbox__input"><br><br>
+              </label>
+              <h5>Choose Your Sides</h5>
+              <!-- MDL number input with floating label for garlic potato side -->
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="number" id="potatoes" value="0" step="1" min="0" max="3" name="potatoes">
+                <label class="mdl-textfield__label" for="drinks">Pick a number of garlic potato sides:</label>
+              </div><br>
+              <!-- MDL number input with floating label for drinks -->
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="number" id="drinks" step="1" value="0" min="0" max="6" name="drinks">
+                <label class="mdl-textfield__label" for="drinks">Pick a number of drinks:</label>
+              </div><br>
+              <input type="submit" id="submit-button" value="Submit Your Order">
+            </form>
+          </div>
+        </td>
+        <!-- Second cell for image and results div on right side of screen -->
+        <td id="td-right">
+          <img src="./images/chicken.webp">
+          <?php echo "<h4>Your Total:</h4>"; ?>
+          <iframe id="results" name="results"></iframe>
+        </td>
+      </tr>
   </body>
 </html>
