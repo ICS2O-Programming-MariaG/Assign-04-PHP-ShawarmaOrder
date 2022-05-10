@@ -23,10 +23,13 @@
   <body>
     <!-- More MDL code -->
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <?php
-      echo "<h2>Shawarma Haven - PHP Menu</h2>";
-      echo "<p>Welcome to Shawarma Haven! Use this web page to view our menu and place your order online! Then, review your order and total and submit it to us. You can get your order delivered or you can select a location for pickup.</p>";
-    ?>
+    <!-- Adding an image as a background for the text -->
+    <img src="./images/shawarma-rack.jpg" alt="shawarma">
+    <!-- Div to style text to be placed over image -->
+    <div id="text-in-front">
+      <h2>Shawarma Haven - PHP Menu</h2>
+      <p>Welcome to Shawarma Haven! Use this web page to view our menu and place your order online! Then, review your order and total and submit it to us. You can get your order delivered or you can select a location for pickup.</p>
+    </div>
     <!-- Div for style -- background colour -->
     <div id="first-coloured-div">
       <?php echo "<h4>Our Menu and Prices:</h4>"; ?>
