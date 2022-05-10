@@ -1,7 +1,9 @@
 <?php
-  //setting constants for tax and topping cost
+  //setting constants for tax and unit prices of toppings and sides
   define("HST", 0.13);
   define("TOPPING_UNIT_PRICE", 0.25);
+  define("UNIT_PRICE_POTATOES", 6.00);
+  define("UNIT_PRICE_DRINKS", 3.00);
 
   //initializing variable for the base sandwich cost
   $baseSandCost = 0;
@@ -72,8 +74,8 @@
   }
 
   //determining the cost of the sides
-  $costDrinks = $numDrinks * 3.00;
-  $costPotatoes = $numPotatoes * 6.00;
+  $costDrinks = $numDrinks * UNIT_PRICE_DRINKS;
+  $costPotatoes = $numPotatoes * UNIT_PRICE_POTATOES;
 
   //calculating the totals
   $subtotal = $baseSandCost + $costToppings + $costDrinks + $costPotatoes;
